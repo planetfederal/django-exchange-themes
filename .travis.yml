@@ -1,0 +1,17 @@
+language: python
+python:
+  - "2.7"
+before_install:
+  - pip install -q 'flake8<3'
+  - PYFLAKES_NODOCTEST=1 flake8 appearance
+before_script:
+  - python appearance/tests/manage.py migrate
+  - python appearance/tests/manage.py collectstatic --noinput
+install:
+  - pip install -e .
+  - pip install -q coverage
+  - pip install -q coveralls
+script:
+  - coverage run manage.py test appearance
+after_success:
+  coveralls

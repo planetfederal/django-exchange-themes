@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load classification_banner i18n %}
+{% load static from staticfiles %}
+{% load theme_tags %}
+
+{% block extra_head %}
+  {% get_theme as theme %}
+  <link href="{% static "css/site_base.css"%}" rel="stylesheet"/>
+  <link href="{% static "font-exchange/style.css"%}" rel="stylesheet"/>
+  <style>
+    {% if theme.banner_logo %}
+        .navbar-brand {
+            background-image: url('{{ theme.banner_logo_url }}');
+        }
+    {% else %}
+        .navbar-brand {
+            background-image: url('{% static "theme/img/default-banner-icon.png"%}');
+        }
+    {% endif %}
+    {% if theme.running_link_hex %}
+        .navbar-inverse {
+            background-image: linear-gradient(to bottom, #{{ theme.running_hex }}, #222);
+        }
+        .footer {
+            background-image: linear-gradient(to bottom, #{{ theme.running_hex }}, #222);
+        }
+    {% else %}
+        .navbar-inverse {
+            background-image: linear-gradient(to bottom, #0F1A2C, #222);
+        }
+        .footer {
+            background-image: linear-gradient(to bottom, #0F1A2C, #222);
+        }
+    {% endif %}
+    {% if theme.running_text_hex %}
+        .navbar-inverse .navbar-nav > li > a {
+            color: #{{ theme.running_text_hex }};
+        }
+        .footer .container .row {
+            color: #{{ theme.running_text_hex }};
+        }
+    {% else %}
+        .navbar-inverse .navbar-nav > li > a {
+            color: #FFFFFF;
+        }
+        .footer .container .row {
+            color: #FFFFFF;
+        }
+    {% endif %}
+    {% if theme.hyperlink_hex %}
+        a {
+            color: #{{ theme.hyperlink_hex }};
+        }
+        a:hover {
+            color: #{{ theme.hyperlink_hex }};
+        }
+    {% else %}
+        a {
+            color: #37A6AD;
+        }
+        a:hover {
+            color: #37A6AD;
+        }
+    {% endif %}
+  </style>
+{% endblock %}
+{% block header %}
+    {% if classification_banner_enabled %}
+        <link href="{% static "css/django_classification_banner_overrides.css"%}" rel="stylesheet"/>
+        {% classification_banner %}
+    {% endif %}
+    {{ block.super }}
+{% endblock %}
