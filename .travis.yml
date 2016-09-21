@@ -12,6 +12,6 @@ install:
   - pip install -q coverage
   - pip install -q coveralls
 script:
-  - coverage run manage.py test appearance
+  - coverage run appearance/tests/manage.py test appearance
 after_success:
   coveralls
