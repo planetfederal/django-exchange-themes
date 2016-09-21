@@ -1,5 +1,7 @@
 # django-exchange-themes
 
+[![Build Status](https://travis-ci.org/boundlessgeo/django-exchange-themes.svg?branch=master)](https://travis-ci.org/boundlessgeo/django-exchange-themes)
+
 django-exchange-themes is an appearance application that allows administrators
 the ability to select a predefined theme or customize their own theme.
 
