@@ -10,8 +10,6 @@ before_script:
 install:
   - pip install -e .
   - pip install -q coverage
-  - pip install -q coveralls
 script:
-  - coverage run appearance/tests/manage.py test appearance
-after_success:
-  coveralls
+  - pushd appearance/tests/; coverage run manage.py test appearance; popd
+  - pushd appearance/tests/; coverage report | grep appearance; popd

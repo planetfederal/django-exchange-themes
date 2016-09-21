@@ -6,7 +6,7 @@ the ability to select a predefined theme or customize their own theme.
 ## Installation
 1. pip install
 ```
-pip install git+git://github.com/boundlessgeo/django-exchange-themes@master#egg=appearance
+pip install git+git://github.com/BerryDaniel/django-exchange-themes@master#egg=appearance
 ```
 2. Add the following to your Django configuration (settings) file
 ```
