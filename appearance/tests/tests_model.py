@@ -23,8 +23,8 @@ class ThemeTestCase(TestCase):
             pb_link="http://boundlessgeo.com/",
             docs_link="/static/docs/index.html",
             background_logo="theme/img/default-background.png",
-            primary_logo="theme/img/default-logo.png",
-            banner_logo="theme/img/default-banner-icon.png"
+            primary_logo="theme/img/default-primary-logo.png",
+            banner_logo="theme/img/default-banner-logo.png"
         )
         self.t1.save()
         self.t2 = Theme.objects.create(
@@ -53,11 +53,11 @@ class ThemeTestCase(TestCase):
         )
         self.assertEqual(
             self.t1.primary_logo_url,
-            '/static/theme/img/default-logo.png'
+            '/static/theme/img/default-primary-logo.png'
         )
         self.assertEqual(
             self.t1.banner_logo_url,
-            '/static/theme/img/default-banner-icon.png'
+            '/static/theme/img/default-banner-logo.png'
         )
         self.assertEqual(self.t1.__unicode__(), self.t1.name)
         self.assertEqual(self.t2.background_logo_url, None)
