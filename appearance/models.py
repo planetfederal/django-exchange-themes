@@ -91,6 +91,14 @@ class Theme(models.Model):
         null=True,
         blank=True
     )
+    docs_text = models.CharField(
+        max_length=32,
+        default="Documentation",
+        verbose_name="Footer Documentation Text",
+        help_text="Text for the documentation link",
+        null=True,
+        blank=True
+    )
     docs_link = models.URLField(
         default=None,
         verbose_name="Documentation Link URL",

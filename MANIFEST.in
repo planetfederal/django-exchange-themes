@@ -1,2 +1,2 @@
 include README.md
-recursive-include  appearance *.db *.json *.js *.css *.png *.gif *.html 
+recursive-include  appearance *.db *.json *.js *.css *.png *.gif *.jpg *.html

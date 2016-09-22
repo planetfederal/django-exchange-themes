@@ -82,6 +82,14 @@ class Migration(migrations.Migration):
                     null=True,
                     verbose_name=b'Documentation Link URL'
                 )),
+                ('docs_text', models.CharField(
+                    default=b'Documentation',
+                    max_length=32,
+                    blank=True,
+                    help_text=b'Text for the documentation link',
+                    null=True,
+                    verbose_name=b'Documentation Text'
+                )),
                 ('background_logo', models.ImageField(
                     default=None,
                     upload_to=b'theme/img/',
