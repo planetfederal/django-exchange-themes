@@ -10,7 +10,6 @@ class ThemeTestCase(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
         self.t1 = Theme.objects.create(
-            pk=1000,
             name="Test1",
             description="Test Description",
             default_theme=True,
@@ -29,7 +28,6 @@ class ThemeTestCase(TestCase):
         )
         self.t1.save()
         self.t2 = Theme.objects.create(
-            pk=1001,
             name="Test2",
             description="Test Description",
             default_theme=False,

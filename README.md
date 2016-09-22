@@ -5,6 +5,8 @@
 django-exchange-themes is an appearance application that allows administrators
 the ability to select a predefined theme or customize their own theme.
 
+The license for this matches the license found for [colorfield](https://github.com/h3/django-colorfield), which is BSD License and listed in the classifiers section of setup.py. The author has also been added to the setup.py of django-exchange-themes.
+
 ## Installation
 1. pip install
 ```
