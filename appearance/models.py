@@ -71,7 +71,7 @@ class Theme(models.Model):
         blank=True
     )
     running_link_hex = ColorField(
-        default="0F1A2C",
+        default="29748F",
         verbose_name="Header Footer Link Color",
         null=True,
         blank=True
