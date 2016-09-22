@@ -10,7 +10,7 @@ The license for this matches the license found for [colorfield](https://github.c
 ## Installation
 1. pip install
 ```
-pip install git+git://github.com/BerryDaniel/django-exchange-themes@master#egg=appearance
+pip install git+git://github.com/boundlessgeo/django-exchange-themes@master#egg=appearance
 ```
 2. Add the following to your Django configuration (settings) file
 ```
@@ -80,7 +80,7 @@ The `Theme model` has the following fields:
   + Default is 'http://boundlessgeo.com/'
 + __docs_link__ (Documentation links)
   + URLField
-  + Default is '/static/docs/index.html'
+  + Can be blank
 + __background_logo__ (Landing page background image)
   + ImageField
   + Can be blank

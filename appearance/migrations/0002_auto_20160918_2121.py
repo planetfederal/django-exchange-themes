@@ -16,7 +16,7 @@ def load_themes(apps, schema_editor):
         running_link_hex="506a94",
         pb_text="Boundless Spatial",
         pb_link="http://boundlessgeo.com/",
-        docs_link="https://boundlessgeo.github.io/exchange-documentation/",
+        docs_link=None,
         background_logo="theme/img/geoint-background.png",
         primary_logo="theme/img/geoint-primary-logo.png",
         banner_logo="theme/img/geoint-banner-logo.png"
