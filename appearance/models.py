@@ -92,7 +92,7 @@ class Theme(models.Model):
         blank=True
     )
     docs_link = models.URLField(
-        default="/static/docs/index.html",
+        default=None,
         verbose_name="Documentation Link URL",
         help_text="Link for the Documentation",
         null=True,

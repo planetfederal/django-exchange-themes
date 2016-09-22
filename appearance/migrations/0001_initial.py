@@ -76,7 +76,7 @@ class Migration(migrations.Migration):
                     verbose_name=b'Footer Link URL'
                 )),
                 ('docs_link', models.URLField(
-                    default=b'/static/docs/index.html',
+                    default=None,
                     blank=True,
                     help_text=b'Link for the Documentation',
                     null=True,
