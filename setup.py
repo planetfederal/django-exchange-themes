@@ -28,7 +28,7 @@ setup(
         'Intended Audience :: End Users/Desktop',
         'Intended Audience :: System Administrators',
         'Environment :: Web Environment',
-        'License :: OSI Approved :: BSD',
+        'License :: OSI Approved :: BSD License',
         'Development Status :: 3 - Alpha',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 2.7',
