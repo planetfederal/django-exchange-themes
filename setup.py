@@ -1,12 +1,12 @@
 import os
 from setuptools import setup, find_packages
 
-with open('README.md', 'r') as inp:
+with open('README.rst', 'r') as inp:
     LONG_DESCRIPTION = inp.read()
 
 setup(
     name='django-exchange-themes',
-    version='1.0.0',
+    version='1.0.1',
     author='Boundless Spatial, Maxime Haineault (django-colorfield)',
     author_email='contact@boundlessgeo.com',
     url='https://github.com/boundlessgeo/django-exchange-themes',
