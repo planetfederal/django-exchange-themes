@@ -156,9 +156,14 @@
                 {% endif %}
                 &nbsp;&nbsp;{% trans "version" %} {{ VERSION }}</b>&nbsp;&nbsp;|&nbsp;&nbsp;
                 {% if theme.docs_link %}
-                  <a href="{{ theme.docs_link }}" target="_new">{% trans "Documentation" %}</a>
+                  <a href="{{ theme.docs_link }}" target="_new">
                 {% else %}
-                  <a href="/static/docs/index.html" target="_new">{% trans "Documentation" %}</a>
+                  <a href="/static/docs/index.html" target="_new">
+                {% endif %}
+                {% if theme.docs_text %}
+                  {{ theme.docs_text }}</a>
+                {% else %}
+                  {% trans "Documentation" %}</a>
                 {% endif %}
             </div>
           </div>
