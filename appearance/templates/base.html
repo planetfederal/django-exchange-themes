@@ -215,9 +215,6 @@
               <li><a href="{{ user.get_absolute_url }}"><i class="fa fa-user"></i> {% trans "Profile" %}</a></li>
               <li><a href="{% url "recent-activity" %}"><i class="fa fa-fire"></i> {% trans "Recent Activity" %}</a></li>
               <li><a href="{% url "messages_inbox" %}"><i class="fa fa-inbox"></i> {% trans "Inbox" %}</a></li>
-              {% if not REGISTRY %}
-              <li><a href="{% url "services" %}"><i class="fa fa-globe"></i> {% trans "Remote Services" %}</a></li>
-              {% endif %}
               {% if USE_NOTIFICATIONS %}
                 <li><a href="{% url "notification_notice_settings" %}"><i class="fa fa-bell"></i> {% trans "Notifications" %}</a></li>
               {% endif %}
