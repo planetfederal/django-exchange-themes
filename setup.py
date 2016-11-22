@@ -6,7 +6,7 @@ with open('README.rst', 'r') as inp:
 
 setup(
     name='django-exchange-themes',
-    version='1.0.2',
+    version='1.0.3',
     author='Boundless Spatial, Maxime Haineault (django-colorfield)',
     author_email='contact@boundlessgeo.com',
     url='https://github.com/boundlessgeo/django-exchange-themes',
