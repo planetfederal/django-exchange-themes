@@ -9,7 +9,7 @@
 {% block body_class %}home{% endblock %}
 
 {% block middle %}
-
+  <link href="{% static "theme/css/default.css"%}" rel="stylesheet"/>
   {% block hero %}
   {% get_theme as theme %}
   {% if theme.background_logo %}
@@ -22,7 +22,8 @@
         {% if theme.primary_logo %}
           <img src="{{ theme.primary_logo_url }}">
         {% else %}
-          <img src="{% static "theme/img/default-primary-logo.png" %}">
+          <!-- Added a blank src image, to remove the gray box -->
+          <img class="logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAA‌​AAALAAAAAABAAEAAAIBR‌​AA7">
         {% endif %}
         {% if theme.title %}
           <span class="title">{{ theme.title }}</span>
