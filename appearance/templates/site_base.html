@@ -10,9 +10,12 @@
   <link href="{% static "font-exchange/style.css"%}" rel="stylesheet"/>
   <style>
     {% if theme.banner_logo %}
-        .navbar-brand {
+        a.navbar-brand {
             background-image: url('{{ theme.banner_logo_url }}');
-        }
+            {% ifequal theme.name  "GEOINT" %}
+	        background-size: 30%;
+            {% endifequal %}
+	}
     {% else %}
         .navbar-brand {
             background-image: url('{% static "theme/img/default-banner-logo.svg"%}');
